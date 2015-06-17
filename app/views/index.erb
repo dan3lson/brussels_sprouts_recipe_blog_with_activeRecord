@@ -1,1 +1,11 @@
-<h1><%= @title %></h1>
+<h1>Recipes</h1>
+
+<% @recipes.each do |recipe| %>
+  <%= recipe.name %>
+  <ul>
+    <% recipe.comments.each do |comment| %>
+      <li>Title: <%= comment.title %></li>
+      <li>Description: <%= comment.description %></li>
+    <% end %>
+  </ul>
+<% end %>

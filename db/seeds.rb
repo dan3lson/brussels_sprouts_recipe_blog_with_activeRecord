@@ -1,6 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Example:
-#
-#   Person.create(first_name: 'Eric', last_name: 'Kelly')
+recipe1 = Recipe.create(name: "Mangu", description: "Delicious Dominican shit")
+recipe2 = Recipe.create(name: "Morir Sonando", description: "Bestest beverage ever.")
+recipe3 = Recipe.create(name: "Pastelon", description: "Sweet plantains, ground beef, cheese. Yum")
+recipe4 = Recipe.create(name: "Queso Frito", description: "Fried cheese")
+recipe5 = Recipe.create(name: "Salchichon", description: "Fried salami")
+
+Comment.create(title: "Delicious", description: "Yummy shit", recipe: recipe1)
+Comment.create(title: "Even more delicious", description: "Yummy yummy shit", recipe: recipe2)
+Comment.create(title: "Even more more delicious", description: "Yummy yummy yummy shit", recipe: recipe3)
+Comment.create(title: "Even more more more delicious", description: "Yummy yummy yummy shit", recipe: recipe4)
+Comment.create(title: "Even more more more delicious", description: "Yummy yummy yummy yummy shit", recipe: recipe5)
